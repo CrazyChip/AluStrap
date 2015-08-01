@@ -89,8 +89,8 @@ color("Green",0.3) translate([0,0,51]) cube(size=[200,230,4],center=true);
 
 // threaded rod
 include <rod.scad>;
-translate([19,221,175])  rod25();
-translate([19,-221,175]) rod25();
+translate([19,221,175])  rod6();
+translate([19,-221,175]) rod6();
 
 // shaft supports
 include <support.scad>;
