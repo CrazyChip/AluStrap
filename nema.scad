@@ -23,7 +23,7 @@ nema_shaft=5,
     // ring
     color("Silver") translate([0,0,nema_height/2+1]) difference(){
       cylinder(r=11,h=2,center=true);
-      cylinder(r=8,h=2,center=true);
+      cylinder(r=8,h=3,center=true);
     }
   }
 }

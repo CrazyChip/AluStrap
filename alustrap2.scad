@@ -19,6 +19,11 @@ union(){
   translate([0,-190,20]) rotate([0,0,90]) tube20();
   translate([10,195,40])  tube20(50);
   translate([10,-195,40]) tube20(50);
+  //motor support
+  translate([-190,0,20]) tube20(50);
+  //608zz support
+  translate([190,0,20]) tube20(50);
+  translate([190,0,40]) tube20(50);
   // vertical parts
   translate([30,-210,210]) rotate([90,0,0]) tube20();
   translate([30,210,210])  rotate([90,0,0]) tube20();
@@ -62,7 +67,7 @@ include <nema.scad>;
 translate([-21,221,10.5])  nema17();
 translate([-21,-221,10.5]) nema17();
 // bed motor
-translate([-201,30,38]) rotate([90,0,0]) nema17();
+translate([-221,0,10]) nema17();
 // head motor
 translate([-54.5,168,229])rotate([0,90,0]) nema17();
 // extruder
@@ -71,7 +76,7 @@ translate([-180,221,10.5]) nema17();
 // PULLEYS
 include <pulley.scad>;
 // table pulley
-translate([-201,0,38]) rotate([90,0,0]) pulley20();
+translate([-221,0,38]) pulley20();
 // head pulley
 translate([-25,168,229]) rotate([0,90,0]) pulley20();
 
@@ -137,11 +142,9 @@ translate([-41,190,140])  rotate([90,0,0]) support12();
 // BELTS
 // bed belt bearing
 include <608zz.scad>;
-translate([0,0,7]){
-translate([190,0,25]) rotate([90,90,0]) 608zz();
+translate([165,0,37]) rotate([0,0,0]) 608zz();
 // bed belt
 color("Black"){
-translate([-6,0,20]) rotate([0,1.8,0]) cube(size=[390,7,2],center=true);
-translate([-6,0,37]) cube(size=[390,7,2],center=true);
-}
+translate([-26,-8,37]) rotate([0,0,-1]) cube(size=[390,2,7],center=true);
+translate([-26,8,37]) rotate([0,0,1]) cube(size=[390,2,7],center=true);
 }
