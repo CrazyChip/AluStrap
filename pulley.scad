@@ -14,7 +14,7 @@ difference(){
   union(){
     // teeth
     for(i=[1:pulley_n]){
-    angle = i*360/pulley_n;
+    assign(angle = i*360/pulley_n)
     rotate(angle,[0,0,1]) translate([pulley_d/2,0,0]) cylinder(d=pulley_tooth/2,h=pulley_h+1,center=true);
     }
   }
