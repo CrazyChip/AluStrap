@@ -22,8 +22,8 @@ union(){
   //motor support
   translate([-190,0,20]) tube20(50);
   //608zz support
-  translate([190,0,20]) tube20(50);
-  translate([190,0,40]) tube20(50);
+  translate([190,10,20]) tube20(50);
+  translate([190,10,40]) tube20(50);
   // vertical parts
   translate([30,-210,210]) rotate([90,0,0]) tube20();
   translate([30,210,210])  rotate([90,0,0]) tube20();
@@ -41,10 +41,12 @@ union(){
   translate([-25,-190,185]) rotate([90,0,270]) uprofile(130);
   translate([-25,190,185])  rotate([90,0,270]) uprofile(130);
   // horizontal carret
-  translate([-22,0,190]) rotate([0,90,0]) uprofile(100);
-  translate([-22,0,140]) rotate([0,90,0]) uprofile(100);
-  translate([-2,30,165])  rotate([90,0,0]) tube20(70);
-  translate([-2,-30,165]) rotate([90,0,0]) tube20(70);
+  translate([-22,0,190])  rotate([0,90,0]) uprofile(100);
+  translate([-22,0,140])  rotate([0,90,0]) uprofile(100);
+  translate([-2,30,175])  rotate([90,0,0]) tube20(90);
+  translate([-2,-30,175]) rotate([90,0,0]) tube20(90);
+  // belt fix
+  translate([-22,0,210]) tube20(100);
 }
 
 // RODS
@@ -67,7 +69,7 @@ include <nema.scad>;
 translate([-21,221,10.5])  nema17();
 translate([-21,-221,10.5]) nema17();
 // bed motor
-translate([-221,0,10]) nema17();
+translate([-159,4,10]) nema17();
 // head motor
 translate([-54.5,168,229])rotate([0,90,0]) nema17();
 // extruder
@@ -76,7 +78,7 @@ translate([-180,221,10.5]) nema17();
 // PULLEYS
 include <pulley.scad>;
 // table pulley
-translate([-221,0,38]) pulley20();
+translate([-159,4,38]) pulley20();
 // head pulley
 translate([-25,168,229]) rotate([0,90,0]) pulley20();
 
@@ -94,7 +96,7 @@ translate([-6,-190,140]) lm12uu();
 translate([-6,-190,190]) lm12uu();
 // head bearings
 translate([-41,30,140])  rotate([90,0,0]) lm12uu();
-translate([-41,30,190])  rotate([90,0,0]) lm12uu();
+translate([-41,150,190])  rotate([90,0,0]) lm12uu();
 translate([-41,-30,140]) rotate([90,0,0]) lm12uu();
 translate([-41,-30,190]) rotate([90,0,0]) lm12uu();
 
@@ -142,9 +144,16 @@ translate([-41,190,140])  rotate([90,0,0]) support12();
 // BELTS
 // bed belt bearing
 include <608zz.scad>;
-translate([165,0,37]) rotate([0,0,0]) 608zz();
+translate([165,10,37]) 608zz();
 // bed belt
 color("Black"){
-translate([-26,-8,37]) rotate([0,0,-1]) cube(size=[390,2,7],center=true);
-translate([-26,8,37]) rotate([0,0,1]) cube(size=[390,2,7],center=true);
+translate([5,0,38]) cube(size=[330,2,7],center=true);
+translate([5,14,38]) rotate([0,0,2.2]) cube(size=[330,2,7],center=true);
+}
+// head belt bearing
+translate([-25,-165,230]) rotate([90,180,90]) 608zz();
+// head belt
+color("Black"){
+translate([-25,0,238]) rotate([-1,0,0]) cube(size=[7,335,2],center=true);
+translate([-25,0,222]) rotate([1,0,0])  cube(size=[7,335,2],center=true);
 }
