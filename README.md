@@ -9,6 +9,10 @@ A 3D printer modelled in OpenSCAD. Most parts are standart off the shelf.
 * Threaded rods with nuts - 6mm steel
 
 Work in progress:
+
+2015-08-14
+![snapshot3](https://cloud.githubusercontent.com/assets/8031482/9264314/a974086a-422d-11e5-8779-193b2a894f09.png)
+
 2015-08-04
 ![render2](https://cloud.githubusercontent.com/assets/8031482/9055656/8c1cd84a-3a95-11e5-8f0d-6c1278edd484.png)
 
