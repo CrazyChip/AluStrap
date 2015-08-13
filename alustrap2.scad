@@ -96,7 +96,7 @@ translate([-6,-190,140]) lm12uu();
 translate([-6,-190,190]) lm12uu();
 // head bearings
 translate([-41,30,140])  rotate([90,0,0]) lm12uu();
-translate([-41,150,190])  rotate([90,0,0]) lm12uu();
+translate([-41,30,190])  rotate([90,0,0]) lm12uu();
 translate([-41,-30,140]) rotate([90,0,0]) lm12uu();
 translate([-41,-30,190]) rotate([90,0,0]) lm12uu();
 
