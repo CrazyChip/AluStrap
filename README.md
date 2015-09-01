@@ -10,6 +10,9 @@ A 3D printer modelled in OpenSCAD. Most parts are standart off the shelf.
 
 Work in progress:
 
+2015-09-02
+![rendered](https://cloud.githubusercontent.com/assets/8031482/9619900/4856b560-511d-11e5-97de-56bae422b729.png)
+
 2015-08-14
 ![snapshot3](https://cloud.githubusercontent.com/assets/8031482/9264471/75b930e8-422f-11e5-855b-fd4edbfd9afe.png)
 
